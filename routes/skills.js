@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var skillsController = require('../controllers/skills');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// GET /skills
+router.get('/', skillsController.index);
+// GET /skills/:id
+router.get('/:id', skillsController.show);
+
 
 module.exports = router;
