@@ -6,12 +6,12 @@
   </head>
   <body>
     <a href="/">Home</a>
-    <ol>
+    <ul>
       <% skills.forEach(function(item) { %>
         <li>
           <a href="/skills/<%= item.id %>"><%= item.name %></a>
         </li>
       <% }) %>
-    </ol>
+    </ul>
   </body>
 </html>
