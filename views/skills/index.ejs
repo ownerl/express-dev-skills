@@ -6,6 +6,8 @@
   </head>
   <body>
     <a href="/">Home</a>
+    <a href="/skills">Skills</a>
+    <h1>Skills as of <%= time %></h1>
     <ul>
       <% skills.forEach(function(item) { %>
         <li>
@@ -13,5 +15,6 @@
         </li>
       <% }) %>
     </ul>
+    <a href="/skills/new">Add a Skill</a>
   </body>
 </html>
