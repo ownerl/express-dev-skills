@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Skills</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    <h1><%= title %></h1>
+<%- include('../partials/header') %>
     <form action="/skills" method="POST" autocomplete="off">
         <input type="text" name="name" required placeholder="name"><br>
         <input type="text" name="proficiency" required placeholder="proficiency"><br>
         <input type="text" name="description" required placeholder="description">
         <button type="submit">Save Skill</button>
     </form>
-</body>
-</html>
+<%- include('../partials/footer') %>
+
 

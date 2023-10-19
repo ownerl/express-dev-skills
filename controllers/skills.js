@@ -47,12 +47,14 @@ function newSkill(req,res) {
 
 function index(req,res) {
     res.render('skills/index', {
+        title: 'All Skills',
         skills: Skill.getAll()
     });
 }
 
 function show(req,res) {
     res.render('skills/show', {
+        title: 'My Skill',
         skills: Skill.getOne(req.params.id)
     });
 }

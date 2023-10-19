@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Skills</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/skills">Skills</a>
-    <h1>Skills as of <%= time %></h1>
-    <ul>
-      <% skills.forEach(function(item) { %>
-        <li>
-          <form action="/skills/<%= item.id %>?_method=DELETE" method="POST" class="delete-form">
-            <button type="submit">Delete Skill</button>
-          </form>
-          <a href="/skills/<%= item.id %>"><%= item.name %></a>
-          <a href="/skills/<%= item.id %>/edit">Edit</a>
-        </li>
-      <% }) %>
-    </ul>
-    <a href="/skills/new">Add a Skill</a>
-  </body>
-</html>
+<%- include('../partials/header') %>
+  <h1>Skills as of <%= time %></h1>
+  <ul>
+    <% skills.forEach(function(item) { %>
+      <li>
+        <form action="/skills/<%= item.id %>?_method=DELETE" method="POST" class="delete-form">
+          <button type="submit">Delete Skill</button>
+        </form>
+        <a href="/skills/<%= item.id %>"><%= item.name %></a>
+        <a href="/skills/<%= item.id %>/edit">Edit</a>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/skills/new">Add a Skill</a>
+<%- include('../partials/footer') %>

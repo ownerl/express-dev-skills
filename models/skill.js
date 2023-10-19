@@ -1,5 +1,3 @@
-const { update } = require("../controllers/skills");
-
 const skills = [
     {id: 1, name: 'Drawing', proficiency: 'Good', description: 'Pretty good at drawing, both organic and product rendering.', picture: 'https://cdn.crevado.com/artists/1122122/artwork/13563510_enlarged-1.jpg'},
     {id: 2, name: 'Sculpting', proficiency:'Excellent', description: 'Actually Michelangelo reborn', picture: 'https://cdn.crevado.com/artists/1122122/artwork/11847326_xxl-1.jpg'},
@@ -25,6 +23,7 @@ function deleteOne(deleteId) {
 
 function updateOne(updateId, skill) {
     //console.log(typeof updateId) // bruh, this took me so long to fix, dumb string
+      // All properties attached to req.params are strings!
     updateId = parseInt(updateId)
     //console.log(typeof updateId)
     const updateSkill = skills.find((item) => item.id === updateId);
