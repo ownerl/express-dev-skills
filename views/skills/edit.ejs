@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/skills/<%= id %>?_method=PUT" method="POST" class="edit">
+        <input type="text" name="name" required placeholder="name" value="<%= skill.name %>"><br>
+        <input type="text" name="proficiency" required placeholder="proficiency" value="<%= skill.proficiency %>"><br>
+        <input type="text" name="description" required placeholder="description" value="<%= skill.description %>"><br>
+        <button type="submit">Update Skill</button>
+    </form>
+</body>
+</html>
+

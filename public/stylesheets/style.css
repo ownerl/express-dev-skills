@@ -19,6 +19,18 @@ li {
   margin: 0.8em;
 }
 
+.delete-form {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+.edit {
+  color: red;
+  padding: 0.1em;
+  font-size: 0.8em;
+  border: none;
+}
+
 a {
   color: #cf41ff;
   font-size: 1.2em;

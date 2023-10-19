@@ -8,7 +8,13 @@ router.get('/', skillsController.index);
 router.get('/new', skillsController.new);
 // POST /skills
 router.post('/', skillsController.create);
+// GET /skills/:id/edit
+router.get('/:editId/edit', skillsController.edit);
 // GET /skills/:id
 router.get('/:id', skillsController.show);
+// DELETE /skills/:id
+router.delete('/:deleteId', skillsController.delete);
+// PUT /skills/:id
+router.put('/:updateId', skillsController.update)
 
 module.exports = router;

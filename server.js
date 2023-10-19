@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var skillsRouter = require('./routes/skills');
@@ -37,6 +38,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // if the request is for a static asset (eg. css, image, audio, etc), it returns the file
 app.use(express.static(path.join(__dirname, 'public')));
+// method override to change POST to PUT or DELETE or whatevs
+app.use(methodOverride('_method')); // query parameter can be anything, _method is unlikely to affect anything else
 
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);
